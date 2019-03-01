@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         //ArrayList vs Vector
+        System.out.println("ArrayList vs Vector");
 
         //ArrayList maintains order of insertion and allows identical values
         //not synchronized
@@ -29,7 +30,6 @@ public class Main {
 
         //if you want to synchronize it you can do so by:
         List<Integer> syncedlist = Collections.synchronizedList(list);
-
 
 
         //Vector also maintains order of insertion and allows identical values
@@ -56,6 +56,7 @@ public class Main {
 
         //HashSet vs SortedSet
 
+        System.out.println("\nHashSet vs SortedSet");
         //HashSet is a solid class extending the AbstractSet class which implements the Set interface
         //has unique values and order of insertion is not preserved
         //allows only 1 null value
@@ -68,7 +69,7 @@ public class Main {
         hashset.add(20);
         hashset.add(33);
 
-        System.out.println("\ncontents of hashset: "+ hashset);
+        System.out.println("contents of hashset: "+ hashset);
 
 
         //SortedSet is an interface that implements Set interface
@@ -83,7 +84,7 @@ public class Main {
         sortedSet.add(22);
         //sortedSet.add(null);      //throws a Null pointer exception
 
-        System.out.println("\nContents of SortedSet: "+sortedSet);
+        System.out.println("Contents of SortedSet: "+sortedSet);
 
 
 
@@ -93,6 +94,7 @@ public class Main {
 
 
         //TreeSet vs HashSet
+        System.out.println("\nTreeSet vs HashSet");
         //TreeSet implements the Navigable Interface which extends the SortedSet interface
         //exactly like SortedSet(no duplicated, no null, order is sorted)
         //has extra helper methods inherited from NavigableSet
@@ -130,14 +132,14 @@ public class Main {
 
 
         //Array vs List
-
+        System.out.println("\nArray vs List");
         //An array is basic functionality provided by Java
         //array members are accessed using []
         //no dynamic growth by itself
         //fixed size
         //Array can contain both primitive data types as well as objects of a class
         int[] arr=new int[]{1,2,3,4,5};
-        System.out.println("\nContents of array: ");
+        System.out.println("Contents of array: ");
         for (int i=0;i<arr.length;i++){
             System.out.println(arr[i]);
         }
@@ -172,6 +174,7 @@ public class Main {
 
 
         //List vs Set
+        System.out.println("\nList vs Set");
         //List is an ordered sequence of elements
         //allows duplicates
         //The user can access elements by their integer index
@@ -182,7 +185,7 @@ public class Main {
         arrlist.add(1);
         arrlist.add(1);
         arrlist.add(1);
-        System.out.println("\nContents of List: ");
+        System.out.println("Contents of List: ");
         for (int i=0;i<arrlist.size();i++){
             System.out.println(arrlist.get(i));
         }
@@ -218,6 +221,7 @@ public class Main {
 
 
         //NavigableSet vs NavigableMap
+        System.out.println("\nNavigableSet vs NavigableMap");
 
         //Navigable set is an interface that extends SortedSet interface
         //no duplicates allowed in set
@@ -240,12 +244,6 @@ public class Main {
         System.out.println("Normal order: " + ns);
         System.out.println("Reverse order: " + reverseNs);
 
-        NavigableSet<Integer> threeOrMore = ns.tailSet(3, true);
-        System.out.println("3 or  more:  " + threeOrMore);
-        System.out.println("lower(3): " + ns.lower(3));
-        System.out.println("floor(3): " + ns.floor(3));
-        System.out.println("higher(3): " + ns.higher(3));
-        System.out.println("ceiling(3): " + ns.ceiling(3));
 
         System.out.println("pollFirst(): " + ns.pollFirst());
         System.out.println("Navigable Set:  " + ns);
